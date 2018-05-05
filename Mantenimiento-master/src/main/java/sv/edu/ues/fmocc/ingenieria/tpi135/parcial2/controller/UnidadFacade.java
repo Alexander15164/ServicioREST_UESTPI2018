@@ -24,9 +24,13 @@ public class UnidadFacade extends AbstractFacade<Unidad> implements UnidadFacade
     protected EntityManager getEntityManager() {
         return em;
     }
+    
+    public void setEm(EntityManager em) {
+        this.em = em;
+    }
 
     public UnidadFacade() {
-        super(Unidad.class);
+        super(Unidad.class, "Unidad.findByNombreLike");
     }
     
 }

@@ -24,9 +24,13 @@ public class ResponsableFacade extends AbstractFacade<Responsable> implements Re
     protected EntityManager getEntityManager() {
         return em;
     }
+    
+    public void setEm(EntityManager em) {
+        this.em = em;
+    }
 
     public ResponsableFacade() {
-        super(Responsable.class);
+        super(Responsable.class, "Responsable.findByNombreLike");
     }
     
 }

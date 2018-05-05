@@ -16,7 +16,7 @@ import sv.edu.ues.fmocc.ingenieria.tpi135.parcial2.entidades.Responsable;
  * @author joker
  */
 @Path("responsable")
-public class ResponsableResource extends AbstractResource<Responsable> {
+public class ResponsableResource extends AbstractResource<Responsable> implements FindByName<Responsable>{
     
     @EJB
     private ResponsableFacadeLocal rfl;
@@ -29,6 +29,11 @@ public class ResponsableResource extends AbstractResource<Responsable> {
     @Override
     protected Responsable crearNuevo() {
         return new Responsable();
+    }
+
+    @Override
+    public AbstractInterface<Responsable> getFacadeName() {
+       return rfl;
     }
     
 }

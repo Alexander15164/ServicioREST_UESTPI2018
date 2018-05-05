@@ -24,9 +24,13 @@ public class EstadoFacade extends AbstractFacade<Estado> implements EstadoFacade
     protected EntityManager getEntityManager() {
         return em;
     }
+    
+    public void setEm(EntityManager em) {
+        this.em = em;
+    }
 
     public EstadoFacade() {
-        super(Estado.class);
+        super(Estado.class, "Estado.findByNombreLike");
     }
     
 }

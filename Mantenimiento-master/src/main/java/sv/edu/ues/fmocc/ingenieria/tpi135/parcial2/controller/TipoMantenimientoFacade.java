@@ -24,9 +24,13 @@ public class TipoMantenimientoFacade extends AbstractFacade<TipoMantenimiento> i
     protected EntityManager getEntityManager() {
         return em;
     }
+    
+    public void setEm(EntityManager em) {
+        this.em = em;
+    }
 
     public TipoMantenimientoFacade() {
-        super(TipoMantenimiento.class);
+        super(TipoMantenimiento.class, "TipoMantenimiento.findByNombreLike");
     }
     
 }

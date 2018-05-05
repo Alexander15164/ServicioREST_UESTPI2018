@@ -24,9 +24,13 @@ public class PrioridadFacade extends AbstractFacade<Prioridad> implements Priori
     protected EntityManager getEntityManager() {
         return em;
     }
+    
+    public void setEm(EntityManager em) {
+        this.em = em;
+    }
 
     public PrioridadFacade() {
-        super(Prioridad.class);
+        super(Prioridad.class, "Prioridad.findByNombreLike");
     }
     
 }

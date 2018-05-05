@@ -24,9 +24,12 @@ public class ProcedimientoFacade extends AbstractFacade<Procedimiento> implement
     protected EntityManager getEntityManager() {
         return em;
     }
+    public void setEm(EntityManager em) {
+        this.em = em;
+    }
 
     public ProcedimientoFacade() {
-        super(Procedimiento.class);
+        super(Procedimiento.class, "Procedimiento.findByNombreLike");
     }
     
 }

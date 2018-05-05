@@ -24,9 +24,13 @@ public class TipoResponsableFacade extends AbstractFacade<TipoResponsable> imple
     protected EntityManager getEntityManager() {
         return em;
     }
+    
+    public void setEm(EntityManager em) {
+        this.em = em;
+    }
 
     public TipoResponsableFacade() {
-        super(TipoResponsable.class);
+        super(TipoResponsable.class, "TipoResponsable.findByNombreLike");
     }
     
 }

@@ -24,9 +24,12 @@ public class PasoFacade extends AbstractFacade<Paso> implements PasoFacadeLocal 
     protected EntityManager getEntityManager() {
         return em;
     }
+    public void setEm(EntityManager em) {
+        this.em = em;
+    }
 
     public PasoFacade() {
-        super(Paso.class);
+        super(Paso.class, "Paso.findByNombreLike");
     }
     
 }

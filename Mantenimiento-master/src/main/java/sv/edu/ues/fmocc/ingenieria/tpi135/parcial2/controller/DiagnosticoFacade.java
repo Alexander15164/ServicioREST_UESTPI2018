@@ -25,9 +25,13 @@ public class DiagnosticoFacade extends AbstractFacade<Diagnostico> implements Di
     protected EntityManager getEntityManager() {
         return em;
     }
+    
+    public void setEm(EntityManager em) {
+        this.em = em;
+    }
 
     public DiagnosticoFacade() {
-        super(Diagnostico.class);
+        super(Diagnostico.class,"Diagnostico.findByNombreLike");
     }
     
 }

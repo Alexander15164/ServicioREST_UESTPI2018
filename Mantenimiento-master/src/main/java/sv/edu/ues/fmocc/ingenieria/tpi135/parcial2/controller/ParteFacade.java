@@ -24,9 +24,13 @@ public class ParteFacade extends AbstractFacade<Parte> implements ParteFacadeLoc
     protected EntityManager getEntityManager() {
         return em;
     }
+    
+    public void setEm(EntityManager em) {
+        this.em = em;
+    }
 
     public ParteFacade() {
-        super(Parte.class);
+        super(Parte.class, "Parte.findByNombreLike");
     }
     
 }

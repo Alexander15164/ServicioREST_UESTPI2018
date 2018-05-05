@@ -24,9 +24,13 @@ public class TipoParteFacade extends AbstractFacade<TipoParte> implements TipoPa
     protected EntityManager getEntityManager() {
         return em;
     }
+    
+    public void setEm(EntityManager em) {
+        this.em = em;
+    }
 
     public TipoParteFacade() {
-        super(TipoParte.class);
+        super(TipoParte.class, "TipoParte.findByNombreLike");
     }
     
 }

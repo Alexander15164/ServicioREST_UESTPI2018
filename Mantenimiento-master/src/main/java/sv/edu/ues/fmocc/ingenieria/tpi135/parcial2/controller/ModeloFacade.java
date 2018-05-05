@@ -23,9 +23,13 @@ public class ModeloFacade extends AbstractFacade<Modelo> implements ModeloFacade
     protected EntityManager getEntityManager() {
         return em;
     }
+    
+    public void setEm(EntityManager em) {
+        this.em = em;
+    }
 
     public ModeloFacade() {
-        super(Modelo.class);
+        super(Modelo.class, "Modelo.findByNombreLike");
     }
     
 }
