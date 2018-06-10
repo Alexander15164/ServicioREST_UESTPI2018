@@ -1,0 +1,6 @@
+projectKey=com.mycompany:MantenimientoWebData
+serverUrl=http://192.168.0.12:9000
+serverVersion=6.7.1.35068
+dashboardUrl=http://192.168.0.12:9000/dashboard/index/com.mycompany:MantenimientoWebData
+ceTaskId=AWPpIP9eE6jUnZAOw2jI
+ceTaskUrl=http://192.168.0.12:9000/api/ce/task?id=AWPpIP9eE6jUnZAOw2jI
